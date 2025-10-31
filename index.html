@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colas Diary</title>
+  <style>
+    body {
+      background-color: #0e0b12;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e6dbff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s ease;
+    }
+
+    header {
+      background: linear-gradient(90deg, #2d0b5a, #4b1a7f);
+      padding: 20px;
+      border-bottom: 3px solid #704fb0;
+      box-shadow: 0 4px 10px rgba(80, 52, 28, 0.4);
+    }
+
+    header h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 50px;
+      color: #d8c3ff;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #1a1520;
+      padding: 12px;
+      border-bottom: 2px solid #5e3f92;
+    }
+
+    nav a {
+      color: #c9b2ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d1b17f;
+    }
+
+    .entry, .about {
+      background: #18121e;
+      border-radius: 20px;
+      margin: 40px auto;
+      padding: 30px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 4px 15px rgba(84, 60, 38, 0.3);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .entry h2 {
+      color: #b08cff;
+    }
+
+    /* 🟣 Smooth fade animation for the home photo */
+    .entry img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(80, 52, 28, 0.5);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #704fb0;
+      box-shadow: 0 4px 10px rgba(88, 62, 42, 0.5);
+    }
+
+    .about h2 {
+      color: #d1b17f;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      font-size: 18px;
+      color: #e6dbff;
+      line-height: 1.6;
+    }
+
+    .skills {
+      text-align: left;
+      margin-top: 25px;
+      background-color: #22182c;
+      padding: 20px;
+      border-radius: 15px;
+      color: #d8c3ff;
+    }
+
+    .skills h3 {
+      color: #d1b17f;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .skills ul {
+      list-style-type: disc;
+      padding-left: 30px;
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .skills li {
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      text-align: left;
+      margin-top: 25px;
+      background-color: #22182c;
+      padding: 20px;
+      border-radius: 15px;
+      color: #c4a3ff;
+    }
+
+    .contact h3 {
+      color: #d1b17f;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #b08cff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #d1b17f;
+    }
+
+    footer {
+      background-color: #1a1520;
+      padding: 15px;
+      color: #a88cff;
+      font-size: 14px;
+      border-top: 2px solid #5e3f92;
+      box-shadow: 0 -4px 10px rgba(84, 60, 38, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Colas Diary</h1>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About</a>
+  </nav>
+
+  <section id="home" class="entry show">
+    <!-- ✅ Updated home photo -->
+    <img src="websitehomephoto.jpg" alt="Welcome to Colas Diary">
+    <h2>Welcome to My Diary 💜</h2>
+    <p>Hi! I'm Colas, and this is my online diary. Here, I share thoughts, memories, and little joys of life. Stay a while and read some of my stories!</p>
+  </section>
+
+  <section id="about" class="about">
+    <!-- ✅ Updated about photo -->
+    <img src="websiteaboutphoto.jpeg" alt="Nicole Daniel Viray">
+    <h2>Nicole Daniel Viray</h2>
+    <p>Working Student Since 2021 | 4th Year IT Student | Skilled in Accounting Support & Data Encoding</p>
+
+    <div class="skills">
+      <h3>SKILLS</h3>
+      <ul>
+        <li>Programming</li>
+        <li>Videographing</li>
+        <li>Microsoft Excel / Google Sheets & Computer Troubleshooting</li>
+        <li>Sales Encoding / Data Entry & Purchase Documentation</li>
+        <li>Accounting Assistant & Data Encoder at Armel Industries Corporation | Since January 2021</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <h3>CONTACT</h3>
+      <p>📧 <a href="mailto:nicoledanilemviray@iskolarngbayan.pup.edu.ph">nicoledanilemviray@iskolarngbayan.pup.edu.ph</a></p>
+      <p>🌐 <a href="https://www.linkedin.com/in/nicole-daniel-viray" target="_blank">linkedin.com/in/nicole-daniel-viray</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Colas Diary | Designed with 💜 by Nicole Daniel Viray</p>
+  </footer>
+
+  <script>
+    function showSection(section) {
+      const home = document.getElementById('home');
+      const about = document.getElementById('about');
+
+      home.classList.remove('show');
+      about.classList.remove('show');
+
+      setTimeout(() => {
+        if (section === 'home') {
+          home.style.display = 'block';
+          about.style.display = 'none';
+          home.classList.add('show');
+        } else if (section === 'about') {
+          about.style.display = 'block';
+          home.style.display = 'none';
+          about.classList.add('show');
+        }
+      }, 300);
+    }
+  </script>
+</body>
+</html>
